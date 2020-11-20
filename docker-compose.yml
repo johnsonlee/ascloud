@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  ide:
+    build: .
+    ports:
+      - "9999:9999"
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./.android:/root/.android
+      - ./.projector:/root/.projector
